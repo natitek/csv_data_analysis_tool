@@ -1,0 +1,4 @@
+# hide test csv files and text files
+*.csv
+*.txt
+*.pdf
