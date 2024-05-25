@@ -8,7 +8,7 @@ display_menu() {
 		echo "unique values"
 		;;
 	2)
-		echo "headers"
+		displayHeader
 		;;
 	3)
 		maxAndMinValueFromColumn
@@ -104,6 +104,9 @@ calculateSummaryStatics() {
 		}
 	fi
 }
+displayHeader() {
+	head -n 1 "$$FILE_PATH_FULL"
+}
 
 sortCsvFile() {
 	echo "enter the column number: "
@@ -121,6 +124,7 @@ case $PICK in
 	extension="${filename##*.}"
 	FILE_PATH="${filename%.*}"
 	display_menu
+
 	;;
 2)
 	echo "Settings"
